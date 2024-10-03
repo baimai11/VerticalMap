@@ -53,23 +53,44 @@ function calculateArrivalTime(totalTimeInSeconds) {
 document.getElementById("floors").addEventListener("change", function () {
   const floors = this.value;
   if (floors) {
+    // Walk up calculations
     const totalTimeInSeconds = predictTime(floors);
     const formattedTotalTime = formatTime(totalTimeInSeconds);
     const arrivalTime = calculateArrivalTime(totalTimeInSeconds);
 
-    // Update the HTML content to display the predicted total time and time to arrive
+    // Update the HTML content to display the predicted total time and time to arrive for walk up
     document.querySelector(
       ".walk-box:nth-child(1) .time-info p:nth-child(1) span"
     ).innerText = formattedTotalTime;
     document.querySelector(
       ".walk-box:nth-child(1) .time-info p:nth-child(2) span"
     ).innerText = arrivalTime;
+
+    // Walk down calculations
+    const walkDownTimeInSeconds = 16 * parseFloat(floors);
+    const formattedWalkDownTime = formatTime(walkDownTimeInSeconds);
+    const walkDownArrivalTime = calculateArrivalTime(walkDownTimeInSeconds);
+
+    // Update the HTML content to display the predicted total time and time to arrive for walk down
+    document.querySelector(
+      ".walk-box:nth-child(2) .time-info p:nth-child(1) span"
+    ).innerText = formattedWalkDownTime;
+    document.querySelector(
+      ".walk-box:nth-child(2) .time-info p:nth-child(2) span"
+    ).innerText = walkDownArrivalTime;
   } else {
+    // Reset all time displays if no floor is selected
     document.querySelector(
       ".walk-box:nth-child(1) .time-info p:nth-child(1) span"
     ).innerText = "00:00:00";
     document.querySelector(
       ".walk-box:nth-child(1) .time-info p:nth-child(2) span"
+    ).innerText = "00:00:00";
+    document.querySelector(
+      ".walk-box:nth-child(2) .time-info p:nth-child(1) span"
+    ).innerText = "00:00:00";
+    document.querySelector(
+      ".walk-box:nth-child(2) .time-info p:nth-child(2) span"
     ).innerText = "00:00:00";
   }
 });

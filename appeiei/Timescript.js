@@ -1,6 +1,6 @@
 // Polynomial regression coefficients
-const intercept = 4.25931842;
-const coef = [0.0, 17.34630854, 0.56337349];
+const intercept = 2.69555947;
+const coef = [0.0, 17.83509196, 0.52856008];
 
 // Function to predict the time based on number of floors using the polynomial model
 function predictTime(floors) {

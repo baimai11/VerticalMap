@@ -1,84 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Verticle Maps</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <nav class="container">
-            <div class="logo">
-                <img src="S.png" alt="Verticle Maps Logo">
-                <h1>Verticle Maps</h1>
-            </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">How to ▼</a>
-                    <ul class="dropdown-content">
-                        <li><a href="survive-tsunami.html">Surviving the Tsunami</a></li>
-                        <li><a href="survive-fire.html">Surviving the Fire</a></li>
-                        <li><a href="survive-late.html">Surviving being late for class when the elevator is full</a></li>
-                    </ul>
-                </li>
-                <li><a href="about-us.html">About us</a></li>
+      <nav class="container">
+        <div class="logo">
+          <img src="S.png" alt="Verticle Maps Logo" />
+          <h1>Verticle Maps</h1>
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">How to ▼</a>
+            <ul class="dropdown-content">
+              <li><a href="survive-tsunami.html">Surviving the Tsunami</a></li>
+              <li><a href="survive-fire.html">Surviving the Fire</a></li>
+              <li>
+                <a href="survive-late.html"
+                  >Surviving being late for class when the elevator is full</a
+                >
+              </li>
             </ul>
-        </nav>
+          </li>
+          <li><a href="about-us.html">About us</a></li>
+        </ul>
+      </nav>
     </header>
     <main class="container">
-        <h2>Current time</h2>
-        <div id="current-time" class="time-display">00:00:00</div>
-        <div class="input-group">
-            <label for="floors">Number of floors</label>
-            <select id="floors">
-                <option value="">Select Number of floor</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-                <option value="20">20</option>
-                
-            </select>
+      <h2>Current time</h2>
+      <div id="current-time" class="time-display">00:00:00</div>
+      <div class="input-group">
+        <label for="floors">Number of floors</label>
+        <select id="floors">
+          <option value="">Select Number of floor</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+        </select>
+      </div>
+      <div class="walk-info">
+        <div class="walk-box">
+          <h3>Walk up</h3>
+          <div class="time-info">
+            <p>Total time: <span>00:00:00</span></p>
+            <p>Time to arrive: <span>00:00:00</span></p>
+          </div>
         </div>
-        <div class="walk-info">
-            <div class="walk-box">
-                <h3>Walk up</h3>
-                <div class="time-info">
-                    <p>Total time: <span>00:00:00</span></p>
-                    <p>Time to arrive: <span>00:00:00</span></p>
-                </div>
-            </div>
-            <div class="walk-box">
-                <h3>Walk down</h3>
-                <div class="time-info">
-                    <p>Total time: <span>00:00:00</span></p>
-                    <p>Time to arrive: <span>00:00:00</span></p>
-                </div>
-            </div>
+        <div class="walk-box">
+          <h3>Walk down</h3>
+          <div class="time-info">
+            <p>Total time: <span>00:00:00</span></p>
+            <p>Time to arrive: <span>00:00:00</span></p>
+          </div>
         </div>
+      </div>
     </main>
     <script src="script.js"></script>
-</body>
+    <script src="Timescript.js"></script>
+  </body>
 </html>

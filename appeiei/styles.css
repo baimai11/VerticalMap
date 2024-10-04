@@ -157,9 +157,54 @@ h2 {
   margin-bottom: 30px;
 }
 
+.circle {
+  width: 118px;
+  height: 118px;
+  background-color: #FFB59C;
+  border: solid 3px rgb(0, 0, 0);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* สำหรับการจัดตำแหน่ง label ภายใน */
+}
+
+.circle label {
+  position: absolute;
+  top: -25px; /* ย้าย label ออกไปด้านบนวงกลม */
+  font-size: 14px;
+}
+
+.circle select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  font-size: 25px;
+  text-align: center;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 100%; /* ทำให้ select มีรูปร่างเป็นวงกลม */
+  padding: 0; /* ลบ padding เพื่อให้ข้อความอยู่ตรงกลาง */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .input-group {
   margin-bottom: 30px;
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  border: 0px solid rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-group img{
+  width: 150px;
+  height: 50px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
 label {
@@ -210,30 +255,21 @@ select {
   margin-top: 0;
   color: #333;
   font-weight: normal;
-  margin-right: auto;
+  margin-right: 5%;
 }
 
 .walk-box img {
   width: auto;
   height: 50px;
-  margin-left: 0;
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
 
-.walkup-image {
-    width: auto;
-    height: 50px;
-    margin-left: 0;
-  }
-
-.row {
+.walk-box span {
   display: flex;
+  align-items: center;
 }
 
-.column {
-  flex: 1%;
-  padding: 1px;
-}
 
 .column h3 {
     margin-top: 0;

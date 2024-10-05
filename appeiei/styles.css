@@ -7,6 +7,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  overflow:auto;
 }
 
 .container {
@@ -19,6 +20,20 @@ body {
   position: static;
   width: 80%;
   height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  padding-top: 0;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.container2-us {
+  position: static;
+  width: 80%;
   top: 0;
   left: 0;
   right: 0;
@@ -68,20 +83,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.home-link {
-  background-color: white;
-  color: blue ;
-  padding: 10px;
-  border-radius: 5px;
-  border-color: blue;
-  text-decoration: none;
-}
-
-.home-link.active {
-  background-color: blue;
-  color: white ;
 }
 
 .logo {
@@ -208,6 +209,9 @@ label {
   position: absolute;
   top: -25px; /* ย้าย label ออกไปด้านบนวงกลม */
   font-size: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  
 }
 
 select {
@@ -281,8 +285,9 @@ select {
 
 .walk-box img {
   width: auto;
-  height: 50px;
+  height: 30px;
   object-fit: contain;
+  padding-bottom: 10px;
   transition: transform 0.3s ease;
 }
 

@@ -1,59 +1,53 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
-    const menu = document.querySelector('.menu');
-    const dropdowns = document.querySelectorAll('.dropdown');
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const menu = document.querySelector(".menu");
+  const dropdowns = document.querySelectorAll(".dropdown");
 
-    hamburger.addEventListener('click', function() {
-        this.classList.toggle('active');
-        menu.classList.toggle('active');
-        
-        if (menu.classList.contains('active')) {
-            // Animate menu items
-            menu.querySelectorAll('li').forEach((item, index) => {
-                setTimeout(() => {
-                    item.style.transitionDelay = `${index * 0.1}s`;
-                    item.style.opacity = '1';
-                    item.style.transform = 'translateY(0)';
-                }, 0);
-            });
-        } else {
-            menu.querySelectorAll('li').forEach((item) => {
-                item.style.transitionDelay = '0s';
-                item.style.opacity = '0';
-                item.style.transform = 'translateY(-10px)';
-            });
-        }
-    });
+  hamburger.addEventListener("click", function () {
+    this.classList.toggle("active");
+    menu.classList.toggle("active");
 
-    if (window.location.href.includes("index.html")) {
-        const homeLink = document.querySelector('.home-link');
-        homeLink.style.backgroundColor = 'blue';
-        homeLink.style.color = 'white';
-      }
-
-    dropdowns.forEach(dropdown => {
-        const dropbtn = dropdown.querySelector('.dropbtn');
-        dropbtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            dropdown.classList.toggle('active');
-        });
-    });
-
-    // Current time functionality
-    function updateCurrentTime() {
-        const now = new Date();
-        const hours = String(now.getHours()).padStart(2, '0');
-        const minutes = String(now.getMinutes()).padStart(2, '0');
-        const seconds = String(now.getSeconds()).padStart(2, '0');
-        const timeString = `${hours}:${minutes}:${seconds}`;
-        
-        const currentTimeElement = document.getElementById('current-time');
-        if (currentTimeElement) {
-            currentTimeElement.textContent = timeString;
-        }
+    if (menu.classList.contains("active")) {
+      // Animate menu items
+      menu.querySelectorAll("li").forEach((item, index) => {
+        setTimeout(() => {
+          item.style.transitionDelay = `${index * 0.1}s`;
+          item.style.opacity = "1";
+          item.style.transform = "translateY(0)";
+        }, 0);
+      });
+    } else {
+      menu.querySelectorAll("li").forEach((item) => {
+        item.style.transitionDelay = "0s";
+        item.style.opacity = "0";
+        item.style.transform = "translateY(-10px)";
+      });
     }
+  });
 
-    // Update time immediately and then every second
-    updateCurrentTime();
-    setInterval(updateCurrentTime, 1000);
+  dropdowns.forEach((dropdown) => {
+    const dropbtn = dropdown.querySelector(".dropbtn");
+    dropbtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      dropdown.classList.toggle("active");
+    });
+  });
+
+  // Current time functionality
+  function updateCurrentTime() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, "0");
+    const minutes = String(now.getMinutes()).padStart(2, "0");
+    const seconds = String(now.getSeconds()).padStart(2, "0");
+    const timeString = `${hours}:${minutes}:${seconds}`;
+
+    const currentTimeElement = document.getElementById("current-time");
+    if (currentTimeElement) {
+      currentTimeElement.textContent = timeString;
+    }
+  }
+
+  // Update time immediately and then every second
+  updateCurrentTime();
+  setInterval(updateCurrentTime, 1000);
 });

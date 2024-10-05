@@ -25,6 +25,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    if (window.location.href.includes("index.html")) {
+        const homeLink = document.querySelector('.home-link');
+        homeLink.style.backgroundColor = 'blue';
+        homeLink.style.color = 'white';
+      }
+
     dropdowns.forEach(dropdown => {
         const dropbtn = dropdown.querySelector('.dropbtn');
         dropbtn.addEventListener('click', function(e) {

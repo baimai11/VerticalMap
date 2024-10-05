@@ -116,6 +116,8 @@ nav {
   display: flex;
   margin: 0;
   padding: 0;
+  position: sticky;
+  z-index: 100;
 }
 
 .menu > li {
@@ -197,7 +199,7 @@ h2 {
 }
 
 .time-display {
-  font-size: 48px;
+  font-size: 4vw;
   text-align: center;
   color: #333;
   margin-bottom: 30px;
@@ -215,7 +217,7 @@ label {
 }
 
 select {
-  width: 15%;
+  width: auto;
   height: 40px;
   border-radius: 15px;
   border: 3px solid #4284F3; /* add border style and color */

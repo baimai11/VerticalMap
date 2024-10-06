@@ -73,6 +73,7 @@ body {
   opacity: 0.9; 
 }
 
+
 header {
   background-color: #ffffff;
   border-bottom: 1px solid #e0e0e0;
@@ -264,7 +265,7 @@ select {
   border-radius: 5px;
   opacity: 1;
   background: #f7f5f7;
-  border: 2px solid rgba(0, 0, 0, 0.7);
+  border: 0px solid rgba(0, 0, 0, 0.7);
   box-sizing: border-box;
   display: flex; /* ใช้ flexbox เพื่อแบ่งซ้ายขวา */
   justify-content: space-between; /* เว้นช่องว่างเท่ากันระหว่างกล่อง */
@@ -362,6 +363,10 @@ select {
   margin-bottom: 20px;
 }
 
+.survival-steps span{
+  font-weight: bold;
+}
+
 .about-title {
   font-size: 64px;
   color: #ccc;
@@ -379,6 +384,7 @@ select {
   gap: 30px;
   padding-left: 20px;
   padding-top: 20px;
+  padding-right: 20px;
 }
 
 .team-member {
@@ -454,6 +460,10 @@ select {
 
   .container2 {
     height: unset; /* ลบ height ออก */
+  }
+
+  .current-time-box h2{
+    font-size: 4vw;
   }
 
   .menu {

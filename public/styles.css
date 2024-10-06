@@ -453,7 +453,7 @@ select {
   }
 
   .container2 {
-    height: auto; /* ลบ height ออก */
+    height: unset; /* ลบ height ออก */
   }
 
   .menu {

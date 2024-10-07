@@ -416,6 +416,7 @@ select {
   line-height: 1.5;
 }
 
+
 @media (max-width: 768px) {
   .logo img {
     height: 40px;

@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".hamburger");
   const menu = document.querySelector(".menu");
   const dropdowns = document.querySelectorAll(".dropdown");
+  var select = document.getElementById("floors");
 
   hamburger.addEventListener("click", function () {
     this.classList.toggle("active");
@@ -32,6 +33,18 @@ document.addEventListener("DOMContentLoaded", function () {
       dropdown.classList.toggle("active");
     });
   });
+
+  for (var i = 1; i <= 85; i++) {
+    // Create a new option element
+    var option = document.createElement("option");
+  
+    // Set the value and text of the option
+    option.value = i;
+    option.text = i;
+  
+    // Add the option to the select element
+    select.appendChild(option);
+  }
 
   // Current time functionality
   function updateCurrentTime() {
